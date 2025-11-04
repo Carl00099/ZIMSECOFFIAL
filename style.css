@@ -40,6 +40,13 @@ h1, h2, h3 {
     font-weight: bold;
     text-decoration: none;
     letter-spacing: 1px;
+    display: flex; /* Allows logo image next to text */
+    align-items: center;
+}
+
+.logo img {
+    height: 30px; /* Logo image size */
+    margin-right: 10px;
 }
 
 .nav-links a {
@@ -93,6 +100,7 @@ h1, h2, h3 {
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     transition: transform 0.3s, box-shadow 0.3s;
+    text-align: center;
 }
 
 .resource-card:hover {
@@ -100,7 +108,7 @@ h1, h2, h3 {
     box-shadow: 0 8px 16px rgba(50, 205, 50, 0.3); /* Green Glow on Hover */
 }
 
-.resource-card h3 {
+.resource-card h3, .resource-card h4 {
     margin-top: 10px;
     color: #32CD32;
 }
@@ -111,15 +119,17 @@ h1, h2, h3 {
     font-size: 0.95em;
 }
 
-.resource-card img {
+/* Shared image style for all cards (Home, Resources, Social) */
+.resource-card img, .social-card img {
     width: 100%;
-    max-width: 100px;
-    height: auto;
-    border-radius: 50%;
+    max-width: 100px; /* Standardize size */
+    height: 100px;
+    object-fit: cover;
+    border-radius: 50%; /* Circular Image */
     margin-bottom: 15px;
-    border: 3px solid #32CD32;
+    border: 3px solid #32CD32; /* Lime Green Border */
+    transition: transform 0.3s;
 }
-
 
 /* --- Resource Table (Subject Pages) --- */
 .resource-table {
@@ -142,7 +152,7 @@ h1, h2, h3 {
 }
 
 .resource-table tr:hover {
-    background-color: #111111; /* Slight hover effect on row */
+    background-color: #111111;
 }
 
 /* --- Action Buttons (View PDF) --- */
@@ -173,7 +183,7 @@ h1, h2, h3 {
     height: 60px;
     bottom: 40px;
     right: 40px;
-    background-color: #25D366; /* WhatsApp Green */
+    background-color: #25D366; 
     color: white;
     border-radius: 50px;
     text-align: center;
@@ -185,8 +195,8 @@ h1, h2, h3 {
 }
 
 .projects-float {
-    right: 120px; /* Positions it left of WhatsApp icon */
-    background-color: #32CD32; /* Bright Lime Green */
+    right: 120px;
+    background-color: #32CD32;
     color: #1a1a1a;
 }
 
@@ -211,11 +221,11 @@ h1, h2, h3 {
     gap: 30px;
     margin-top: 50px;
     padding-top: 30px;
-    border-top: 2px solid #1E8449; /* Green Border */
+    border-top: 2px solid #1E8449; 
 }
 
 .social-card {
-    background-color: #1a1a1a; /* Dark Academic Grey */
+    background-color: #1a1a1a;
     border: 1px solid #32CD32; /* Lime Green Border */
     padding: 20px;
     border-radius: 15px; /* Cool Edges */
@@ -227,21 +237,6 @@ h1, h2, h3 {
 .social-card:hover {
     transform: translateY(-5px);
     box-shadow: 0 10px 25px rgba(50, 205, 50, 0.4); /* Green Shadow on Hover */
-}
-
-.social-card img {
-    width: 100%;
-    max-width: 150px;
-    height: auto;
-    border-radius: 50%;
-    margin-bottom: 15px;
-    border: 3px solid #1E8449; /* Forest Green Border */
-    transition: transform 0.3s;
-}
-
-.social-card:hover img {
-    transform: scale(1.05);
-    border-color: #32CD32; 
 }
 
 .follow-button {
@@ -257,5 +252,5 @@ h1, h2, h3 {
 }
 
 .follow-button:hover {
-    background-color: #00A000; /* Darker Action Green */
+    background-color: #00A000; 
 }
